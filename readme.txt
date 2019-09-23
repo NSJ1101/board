@@ -1,0 +1,1 @@
+sql Command Line에 query.txt를 복붙후 사용

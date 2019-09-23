@@ -1,0 +1,35 @@
+
+create table user_tbl(
+ID varchar2(30) not null, 
+PW varchar2(30), 
+name varchar2(30),  
+email varchar2(30), 
+primary key(ID) 
+);
+
+create table post_tbl(
+post_title varchar2(30) not null, 
+post_content varchar2(4000) not null,  
+post_date date, 
+id varchar2(30) not null, 
+post_number varchar2(30) not null, 
+gener_code varchar2(30) not null,
+primary key(id,post_number)
+);
+insert into post_tbl values('안녕하세요.','내용입니다','20190906','관리자','1','1');
+
+create table gener_tbl(
+gener_code varchar2(30),
+gener_name varchar2(30)
+);
+
+insert into gener_tbl values('1','자유 게시판');
+insert into gener_tbl values('2','유머 게시판');
+
+create table view_tbl(
+post_view varchar2(100) not null,
+post_number varchar2(100) not null
+);
+
+
+
