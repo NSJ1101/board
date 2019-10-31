@@ -31,5 +31,9 @@ post_view varchar2(100) not null,
 post_number varchar2(100) not null
 );
 
-
-
+create table comment_tbl(
+comment_number varchar2(240),
+comment_content varchar2(240),
+id varchar2(30),
+post_number varchar2(240),
+comment_date date 

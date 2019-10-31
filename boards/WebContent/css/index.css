@@ -1,0 +1,15 @@
+@charset "UTF-8";
+*{margin:0; padding:0; list-style:none; text-decoration: none;}
+
+section{max-width:1080px; margin:0 auto; height:1000px;}
+.post{max-width:1080px; margin:0 auto; text-align:center;}
+.login_fail{width:150px;float:right;}
+.login_suc{width:150px; float:right;}
+.form-group{margin: 0 auto; max-width: 1080px;}
+.gener{margin:0 auto; text-align:center;}
+header{width:100%; border-bottom: 1px solid #e0dede;}
+.header_inner{max-width:1080px; margin:0 auto; height:80px;  }
+.header_inner ul{list-style:none; text-align:center;}
+.header_inner ul li{float:left; width:14%; display:inline-block;}
+
+form{}
