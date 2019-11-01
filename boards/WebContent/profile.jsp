@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="view/header.jsp"></jsp:include>
 <%
 String name = request.getParameter("name");
 

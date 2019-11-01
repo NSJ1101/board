@@ -37,7 +37,7 @@ ResultSet rs = dbconnection.sendQuery(query);
 while(rs.next()){%>
 <tr>
 <td><%=rs.getString(2) %></td>
-<td><a href="post_content.jsp?post_number=<%=rs.getString(4) %>"><%=rs.getString(4) %></a></td>
+<td><a href="post_content.jsp?post_title=<%=rs.getString(4) %>"><%=rs.getString(4) %></a></td>
 <td><%=rs.getString(3) %></td>
 <td><%=rs.getString(1) %></td>
 <td><%=rs.getString(6) %></td>
@@ -52,7 +52,7 @@ while(rs.next()){%>
 <input type="submit">
 </form>
 
-<button value="글쓰기" onclick="location.href='post_add.jsp'" class="btn btn-secondary" style="float:right;">글 쓰기</button>
+<button value="글쓰기" onclick="location.href='post_add.jsp'"  style="float:right;">글 쓰기</button>
 </section>
 </body>
 </html>

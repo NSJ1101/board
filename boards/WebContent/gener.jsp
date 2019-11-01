@@ -22,12 +22,12 @@ while(gener_rs.next()){
 </div>
 <h1 style="margin:0 auto;">글 목록</h1>
 <div class="post">
-<table class="table table-striped">
+<table>
 <tr>
-<th>작성자</th>
 <th>글번호</th>
-<th>장르</th>
 <th>제목</th>
+<th>장르</th>
+<th>작성자</th>
 <th>날짜</th>
 </tr>
 <%
@@ -39,10 +39,10 @@ String query="select id,post_number,decode(gener_code,1,'자유 게시판',2,'�
 ResultSet rs = dbconnection.sendQuery(query);
 while(rs.next()){%>
 <tr>
-<td><%=rs.getString(1) %></td>
 <td><%=rs.getString(2) %></td>
+<td><a href="post_content.jsp?post_title=<%=rs.getString(4) %>"><%=rs.getString(4) %></a></td>
 <td><%=rs.getString(3) %></td>
-<td><%=rs.getString(4) %></td>
+<td><%=rs.getString(1) %></td>
 <td><%=rs.getString(6) %></td>
 </tr>
 <%} %>

@@ -13,6 +13,15 @@
 
 <section>
 
+<div class="gener"><%
+String query_gener="select gener_code,gener_name from gener_tbl";
+ResultSet gener_rs= dbconnection.sendQuery(query_gener);
+while(gener_rs.next()){
+%>
+<a href="gener.jsp?gener_code=<%=gener_rs.getString(1) %>">
+<%=gener_rs.getString(2) %></a>
+<%} %>
+</div>
 	
 <%
 String urs="./";
@@ -38,7 +47,7 @@ rs= dbconnection.sendQuery(query);
 <%while(rs.next()){ %>
 <tr>
 <td><%=rs.getString(2) %></td>
-<td><a href="post_content.jsp?post_number=<%=rs.getString(4) %>"><%=rs.getString(4) %></a></td>
+<td><a href="post_content.jsp?post_title=<%=rs.getString(4) %>"><%=rs.getString(4) %></a></td>
 <td><%=rs.getString(3) %></td>
 <td><%=rs.getString(1) %></td>
 <td><%=rs.getString(6) %></td>
@@ -46,7 +55,13 @@ rs= dbconnection.sendQuery(query);
 <%} %>
 </table>
 </div>
-<br>
+<form action="find_post.jsp"  method="post" name="find">
+<input type="hidden">
+제목 검색<input type="text" name="posts_title" />
+<input type="submit">
+</form>
+
+<button value="글쓰기" onclick="location.href='post_add.jsp'"  style="float:right;">글 쓰기</button>
 </section>
 </body>
 </html>
